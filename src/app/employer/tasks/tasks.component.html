@@ -1,0 +1,21 @@
+<div class="employer-tasks-container">
+    <h2>Assigned Tasks</h2>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Description</th>
+          <th>Process</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of tasks">
+          <td>{{ task.title }}</td>
+          <td>{{ task.description }}</td>
+          <td> <button (click)="process(task)">Start</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

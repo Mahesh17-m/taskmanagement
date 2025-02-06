@@ -1,0 +1,21 @@
+<div class="manager-container">
+    <div><!-- Sidebar -->
+    <button class="back-btn" (click)="goToLogin()">Back</button>
+    </div>
+    <div class="sidebar">
+      <h2>EmployerDashboard</h2>
+     
+      <ul>
+        <li><a routerLink="/employer/tasks">Tasks</a></li>
+        <li><a routerLink="/employer/task-status">Task-Status</a></li>
+        <li><a routerLink="/employer/task-deadlines">Task-deadlines</a></li>
+        
+      </ul>
+    </div>
+  
+    <!-- Main Content -->
+    <div class="main-content">
+      <router-outlet></router-outlet> <!-- Dynamic content based on route -->
+    </div>
+  </div>
+  

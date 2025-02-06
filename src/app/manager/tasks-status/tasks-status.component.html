@@ -1,0 +1,25 @@
+<div class="task-status-container">
+    <h2>Task Status</h2>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Description</th>
+          <th>Deadline</th>
+          <th>Status</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of employeeTasks">
+          <td>{{ task.title }}</td>
+          <td>{{ task.description }}</td>
+          <td>{{ task.deadline }}</td>
+          <td>{{ task.status }}</td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

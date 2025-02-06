@@ -1,0 +1,37 @@
+<div class="task-assignment-container">
+    <h2>Assign Task</h2>
+  
+    <form (ngSubmit)="assignTask()">
+      <!-- Employee Selection -->
+      <label for="employee">Select Employee:</label>
+      <select id="employee" [(ngModel)]="task.employeeId" name="employee" required>
+        <option *ngFor="let emp of employees" [value]="emp.id">{{ emp.name }}</option>
+      </select>
+  
+      <!-- Task Title -->
+      <label for="title">Task Title:</label>
+      <input type="text" id="title" [(ngModel)]="task.title" name="title" required />
+  
+      <!-- Task Description -->
+      <label for="description">Task Description:</label>
+      <textarea id="description" [(ngModel)]="task.description" name="description" required></textarea>
+  
+      <!-- Deadline -->
+      <label for="deadline">Deadline:</label>
+      <input type="date" id="deadline" [(ngModel)]="task.deadline" name="deadline" required />
+  
+      <!-- Assign Button -->
+      <button type="submit">Assign Task</button>
+    </form>
+  
+    <!-- Assigned Tasks List -->
+    <div class="assigned-tasks">
+      <h3>Assigned Tasks</h3>
+      <ul>
+        <li *ngFor="let t of assignedTasks">
+          <strong>{{ t.title }}</strong> - Assigned to {{ t.employeeName }} (Deadline: {{ t.deadline }})
+        </li>
+      </ul>
+    </div>
+  </div>
+  

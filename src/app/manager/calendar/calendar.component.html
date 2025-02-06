@@ -1,0 +1,26 @@
+<div class="calendar-container">
+  <h2>Task Calendar</h2>
+
+  <!-- Task Calendar Table -->
+  <table>
+    <thead>
+      <tr>
+        <th>Task</th>
+        <th>Assigned To</th>
+        <th>Deadline</th>
+        <th>Update Deadline</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of tasks">
+        <td>{{ task.title }}</td>
+        <td>{{ task.assignedTo }}</td>
+        <td>{{ task.deadline }}</td>
+        <td>
+          <input type="date" [(ngModel)]="task.deadline" />
+          <button (click)="updateDeadline(task)">Update</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
